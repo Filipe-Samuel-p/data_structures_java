@@ -4,6 +4,8 @@ out/
 !**/src/test/**/out/
 .idea
 *.iml
+dataStructuresInJava.iml
+data_structures_java.iml
 
 
 ### Eclipse ###
