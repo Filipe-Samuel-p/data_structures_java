@@ -37,6 +37,6 @@ public class Cylinder implements CylinderContract {
 
     @Override
     public double volume() {
-        return Math.PI * Math.pow(getRadius(),2) * getHeight();
+        return Math.PI * Math.pow(radius,2) * height;
     }
 }
