@@ -14,5 +14,7 @@ public class Main {
         pointTools.freePoint(p1);
         pointTools.freePoint(p2);
 
+
+
     }
 }
