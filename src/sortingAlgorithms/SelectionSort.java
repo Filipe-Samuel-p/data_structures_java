@@ -47,5 +47,7 @@ public class SelectionSort {
         System.out.println("\n");
         selectionSort(vector);
         showVector(vector);
+
+        input.close();
     }
 }

@@ -43,5 +43,7 @@ public class InsertionSort {
         System.out.println("\n");
         insertionSort(vector);
         showVector(vector);
+
+        input.close();
     }
 }

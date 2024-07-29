@@ -49,5 +49,6 @@ public class BubbleSort {
         bubbleSort(vector);
         showVector(vector);
 
+        input.close();
     }
 }
