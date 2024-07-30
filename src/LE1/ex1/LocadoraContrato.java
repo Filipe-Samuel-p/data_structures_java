@@ -9,4 +9,5 @@ public interface LocadoraContrato {
     void pesquisar(ArrayList<Filme>locadora);
     void alugar(ArrayList<Filme> locadora);
     void alterar(ArrayList<Filme> locadora);
+    void limparLocadora(ArrayList<Filme> locadora);
 }

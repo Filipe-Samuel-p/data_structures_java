@@ -14,11 +14,11 @@ public class Filme {
         this.nomeFilm = nomeFilm;
     }
 
-    public Integer getAnoLancamento() {
+    public int getAnoLancamento() {
         return anoLancamento;
     }
 
-    public void setAnoLancamento(Integer anoLancamento) {
+    public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
 
