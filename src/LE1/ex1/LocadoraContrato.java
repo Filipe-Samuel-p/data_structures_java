@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public interface LocadoraContrato {
 
-    void addFilme(ArrayList<Filme> locadora, String nome, String genero, int ano);
-    void filmesDisponiveis(ArrayList<Filme> locadora);
-    void pesquisar(ArrayList<Filme>locadora);
-    void alugar(ArrayList<Filme> locadora);
-    void alterar(ArrayList<Filme> locadora);
-    void limparLocadora(ArrayList<Filme> locadora);
+    void addFilme(String nome, String genero, int ano);
+    void filmesDisponiveis();
+    void pesquisar();
+    void alugar();
+    void alterar();
+    void limparLocadora();
+
 }

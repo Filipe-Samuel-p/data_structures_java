@@ -7,18 +7,19 @@ import java.util.Scanner;
 public class Locadora implements LocadoraContrato{
 
     Scanner input = new Scanner(System.in);
+    List<Filme> listaDeFilmes = new ArrayList<>();
 
     @Override
-    public void alterar(ArrayList<Filme> locadora) {
+    public void alterar() {
 
-        if(locadora.isEmpty()){
+        if(listaDeFilmes.isEmpty()){
             System.out.println("\n Locadora vazia\n");
             return;
         }
 
         System.out.print("Qual nome do filme que quer alterar: ");
         String name = input.nextLine();
-        for(Filme filmeDaLocadora : locadora){
+        for(Filme filmeDaLocadora : listaDeFilmes){
 
             if(filmeDaLocadora.getNomeFilm().equals(name)){
                 System.out.println("\nFilme encontrado\n");
@@ -53,9 +54,9 @@ public class Locadora implements LocadoraContrato{
     }
 
     @Override
-    public void addFilme(ArrayList<Filme> locadora,String nome,String genero, int ano) {
+    public void addFilme(String nome,String genero, int ano) {
         try{
-            locadora.add(new Filme(ano,genero,nome));
+            listaDeFilmes.add(new Filme(ano,genero,nome));
         }
         catch (OutOfMemoryError e){
             System.out.println("Erro de alocação: " + e.getMessage());
@@ -63,16 +64,16 @@ public class Locadora implements LocadoraContrato{
     }
 
     @Override
-    public void alugar(ArrayList<Filme> locadora) {
+    public void alugar() {
 
-        if(locadora.isEmpty()){
+        if(listaDeFilmes.isEmpty()){
             System.out.println("\nLocadora vazia\n");
             return;
         }
 
         System.out.print("Qual nome do filme que quer alugar: ");
         String name = input.nextLine();
-        for(Filme filmeDaLocadora : locadora){
+        for(Filme filmeDaLocadora : listaDeFilmes){
             if(filmeDaLocadora.getNomeFilm().equals(name)){
                 System.out.println("\nFilme encontrado\n");
                 System.out.println("Nome: " + filmeDaLocadora.getNomeFilm());
@@ -83,7 +84,7 @@ public class Locadora implements LocadoraContrato{
                 input.nextLine();
 
                 if(confirmacao == 'y'){
-                    locadora.remove(filmeDaLocadora);
+                    listaDeFilmes.remove(filmeDaLocadora);
                     System.out.println("\n Filme removido\n");
                     return;
                 }
@@ -97,14 +98,14 @@ public class Locadora implements LocadoraContrato{
     }
 
     @Override
-    public void filmesDisponiveis(ArrayList<Filme> locadora) {
+    public void filmesDisponiveis() {
         int count = 0;
         System.out.println("*** FILMES DIPONÍVEIS PARA ALUGUEL ***\n");
-        if(locadora.isEmpty()){
+        if(listaDeFilmes.isEmpty()){
             System.out.println("\n A locadora está vazia\n");
             return;
         }
-        for(Filme filmeDaLocadora : locadora){
+        for(Filme filmeDaLocadora : listaDeFilmes){
             count += 1;
             System.out.printf("\nFilme %d \n",count);
             System.out.println("Nome: " + filmeDaLocadora.getNomeFilm());
@@ -114,16 +115,16 @@ public class Locadora implements LocadoraContrato{
     }
 
     @Override
-    public void pesquisar(ArrayList<Filme> locadora) {
+    public void pesquisar() {
 
-        if(locadora.isEmpty()){
+        if(listaDeFilmes.isEmpty()){
             System.out.println("\nLocadora vazia\n");
             return;
         }
 
         System.out.println("\n Digite o nome do filme: ");
         String name = input.nextLine();
-        for (Filme filmeDaLocadora : locadora) {
+        for (Filme filmeDaLocadora : listaDeFilmes) {
             if (filmeDaLocadora.getNomeFilm().equals(name)) {
                 System.out.println("\n*** Filme Encontrado ***\n");
                 System.out.println("Nome: " + filmeDaLocadora.getNomeFilm());
@@ -136,14 +137,14 @@ public class Locadora implements LocadoraContrato{
     }
 
     @Override
-    public void limparLocadora(ArrayList<Filme> locadora) {
+    public void limparLocadora() {
 
-        if(locadora.isEmpty()){
+        if(listaDeFilmes.isEmpty()){
             System.out.println("\n A locadora esta vazia\n");
             return;
         }
         else{
-            locadora.clear();
+            listaDeFilmes.clear();
             System.out.println("\n **** Locadora foi limpada ****\n");
         }
     }

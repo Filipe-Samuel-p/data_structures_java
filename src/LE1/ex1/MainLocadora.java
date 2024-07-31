@@ -9,7 +9,6 @@ public class MainLocadora {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        ArrayList<Filme> filmeList = new ArrayList<>();
         Locadora locadora = new Locadora();
         int opcao;
         do {
@@ -34,22 +33,22 @@ public class MainLocadora {
                     System.out.print("Ano de lançamento do filme: ");
                     int anoLan = input.nextInt();
                     input.nextLine();
-                    locadora.addFilme(filmeList, filmNome, genero, anoLan);
+                    locadora.addFilme(filmNome, genero, anoLan);
                     break;
                 case 2:
-                    locadora.alterar(filmeList);
+                    locadora.alterar();
                     break;
                 case 3:
-                    locadora.filmesDisponiveis(filmeList);
+                    locadora.filmesDisponiveis();
                     break;
                 case 4:
-                    locadora.pesquisar(filmeList);
+                    locadora.pesquisar();
                     break;
                 case 5:
-                    locadora.alugar(filmeList);
+                    locadora.alugar();
                     break;
                 case 6:
-                    locadora.limparLocadora(filmeList);
+                    locadora.limparLocadora();
                     break;
                 case 7:
                     System.out.println("\nObrigado pela preferencia");
