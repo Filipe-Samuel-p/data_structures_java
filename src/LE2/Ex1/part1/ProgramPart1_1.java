@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class ProgramPart1_1 {
 
     private static class Stack{
-        private int top;
-        private final int[] stackItems = new int[10];
+         int top;
+         final int[] stackItems = new int[10];
     }
 
     private static void startStack(Stack stack){
