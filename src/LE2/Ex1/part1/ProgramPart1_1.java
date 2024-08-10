@@ -48,9 +48,9 @@ public class ProgramPart1_1 {
     }
 
     private static void showStack(Stack stack){
-        for(int element : stack.stackItems){
-            System.out.print(element + "\t");
-        }
+       for(int index = stack.stackItems.length - 1; index >= 0; index--){
+           System.out.println("|" + stack.stackItems[index] + "|");
+       }
     }
 
     public static void main(String[] args) {
@@ -63,7 +63,7 @@ public class ProgramPart1_1 {
         do {
 
             System.out.println("\n ***** Escolha Uma opção *****\n");
-            System.out.print("Stack : ");
+            System.out.print("Stack : \n");
             showStack(stack);
 
             System.out.println("\n\n1- Inserir elemento na pilha");
