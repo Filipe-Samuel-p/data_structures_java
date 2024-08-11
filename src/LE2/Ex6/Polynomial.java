@@ -1,5 +1,6 @@
 package LE2.Ex6;
 
+
 import java.util.Scanner;
 
 public class Polynomial {
@@ -9,6 +10,13 @@ public class Polynomial {
         int coefficient;
         int degree;
         NodePoly link;
+
+        public NodePoly() {}
+
+        public NodePoly(int coefficient, int degree) {
+            this.coefficient = coefficient;
+            this.degree = degree;
+        }
     }
 
     private static NodePoly createPoly(){
@@ -20,9 +28,7 @@ public class Polynomial {
     }
 
     private static void insertNodePoly(NodePoly head, int coef, int degree){
-        NodePoly newNode = new NodePoly();
-        newNode.coefficient = coef;
-        newNode.degree = degree;
+        NodePoly newNode = new NodePoly(coef,degree); // construtor adicionado, só pra poupar linhas de código.
         newNode.link = null;
 
         if(empty(head)){
