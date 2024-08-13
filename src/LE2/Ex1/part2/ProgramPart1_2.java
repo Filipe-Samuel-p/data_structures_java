@@ -14,7 +14,7 @@ public class ProgramPart1_2 {
         NodeStack topNode;
     }
 
-    private static HeadStack creteStack(){
+    public static HeadStack creteStack(){
         HeadStack head = new HeadStack();
         head.topNode = null;
         return head;
