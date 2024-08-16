@@ -32,7 +32,6 @@ OBS: LE1 e LE2 significam listas de exercícios. São listas com problemas a ser
     2- Testes automatizados com Junit e Mockito
 
 
-
 # Data structures 🇺🇸
 
 The purpose of this repository is to store all the teachings of the UENF data structure subject. The subject was originally created to be done using the C language. However, in this repository, I will do all the implementations using JAVA 21.
