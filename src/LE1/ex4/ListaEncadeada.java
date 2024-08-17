@@ -1,7 +1,5 @@
 package LE1.ex4;
 
-import java.util.Scanner;
-
 public class ListaEncadeada {
 
     private class Node{

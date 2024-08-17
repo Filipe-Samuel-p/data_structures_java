@@ -93,6 +93,6 @@ public class ProgramPart1_1 {
             }
 
         }while (option != 4);
-
+        input.close();
     }
 }

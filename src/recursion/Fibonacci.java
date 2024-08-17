@@ -20,5 +20,6 @@ public class Fibonacci {
         int number = input.nextInt();
         int fib = fibonacci(number);
         System.out.printf("the %d term of the fibonacci series is %d", number,fib);
+        input.close();
     }
 }

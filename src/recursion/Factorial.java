@@ -20,5 +20,6 @@ public class Factorial {
         int number = input.nextInt();
         int fac = factorial(number);
         System.out.printf("Factorial of %d is %d", number,fac);
+        input.close();
     }
 }

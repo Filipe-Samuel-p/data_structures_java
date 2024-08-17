@@ -134,5 +134,6 @@ public class ProgramPart1_2 {
             }
 
         }while (option != 5);
+        input.close();
     }
 }

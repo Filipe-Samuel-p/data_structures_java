@@ -128,5 +128,6 @@ public class Polynomial {
         sumOfPoly(head1,head2,head3);
         showPoly(head3);
 
+        input.close();
     }
 }
